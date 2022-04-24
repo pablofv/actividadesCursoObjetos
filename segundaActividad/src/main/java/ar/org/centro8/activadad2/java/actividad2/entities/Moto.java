@@ -15,7 +15,7 @@ public class Moto extends Vehiculo{
         DecimalFormat df=new DecimalFormat("###,###.00");
         //Modelo de ejmplo de salida
         //Marca: Yamaha // Modelo: YBR // Cilindrada: 160c // Precio: $80.500,50
-        return super.toString() + " // Cilindrada: " + cilindrada + " // Precio: $" + df.format(this.getPrecio());
+        return super.toString() + " // Cilindrada: " + cilindrada + " // Precio: $" + df.format(super.getPrecio());
     }
     
 }

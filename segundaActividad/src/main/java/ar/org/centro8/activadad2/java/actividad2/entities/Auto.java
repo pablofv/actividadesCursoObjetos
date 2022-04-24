@@ -15,7 +15,7 @@ public class Auto extends Vehiculo{
         DecimalFormat df=new DecimalFormat("###,###.00");
         //Modelo de ejmplo de salida
         //Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
-        return super.toString() + " // Puertas: " + nroPuertas + " // Precio: $" + df.format(this.getPrecio());
+        return super.toString() + " // Puertas: " + nroPuertas + " // Precio: $" + df.format(this.getPrecio());//dejo this para consultar si hay alguna diferencia con super, ambos funcionaron
     }
 
     
