@@ -49,6 +49,14 @@ public class Testactividad2 {
         
         System.out.println("Vehículo más caro: " + vehMasCaro.getMarca() + " " + vehMasCaro.getModelo());
 
+        //El vehículo mas barato
+        Vehiculo vehMasBarato;
+        vehMasBarato = colVehiculos
+                        .stream()
+                        .min(Comparator.comparingDouble(Vehiculo::getPrecio))
+                        .get();
+        
+        System.out.println("Vehículo más barato: " + vehMasBarato.getMarca() + " " + vehMasBarato.getModelo());
     }
 
 
