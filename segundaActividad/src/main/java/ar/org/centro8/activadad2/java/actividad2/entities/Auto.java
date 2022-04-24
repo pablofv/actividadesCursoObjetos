@@ -1,5 +1,7 @@
 package ar.org.centro8.activadad2.java.actividad2.entities;
 
+import java.text.DecimalFormat;
+
 public class Auto extends Vehiculo{
     private int nroPuertas;
 
@@ -10,7 +12,10 @@ public class Auto extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Auto " + super.toString() + " // Puertas:" + nroPuertas + "]";
+        DecimalFormat df=new DecimalFormat("###,###.00");
+        //Modelo de ejmplo de salida
+        //Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
+        return super.toString() + " // Puertas:" + nroPuertas + " // Precio: $" + df.format(this.getPrecio());
     }
 
     
