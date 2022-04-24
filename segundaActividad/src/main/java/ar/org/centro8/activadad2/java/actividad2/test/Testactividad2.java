@@ -63,12 +63,7 @@ public class Testactividad2 {
     
         System.out.println("\n\n=============================\n\n");
     
-    
-        // Vehículos ordenados por precio de mayor a menor:
-        // Peugeot 208
-        // Peugeot 206
-        // Yamaha YBR
-        // Honda Titan
+        // Ordenados por precio, de mayor a menor
         System.out.println("Vehículos ordenados por precio de mayor a menor:");
         colVehiculos
                     .stream()
