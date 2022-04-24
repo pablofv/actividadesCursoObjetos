@@ -43,9 +43,9 @@ public class Testactividad2 {
         //Consultar que pasa si hay mas de un vehículo mas caro.
         Vehiculo vehMasCaro;
         vehMasCaro = colVehiculos
-            .stream()
-            .max(Comparator.comparingDouble(Vehiculo::getPrecio))
-            .get();
+                        .stream()
+                        .max(Comparator.comparingDouble(Vehiculo::getPrecio))
+                        .get();
         
         System.out.println("Vehículo más caro: " + vehMasCaro.getMarca() + " " + vehMasCaro.getModelo());
 
