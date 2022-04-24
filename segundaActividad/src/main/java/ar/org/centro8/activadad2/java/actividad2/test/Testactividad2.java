@@ -23,16 +23,11 @@ public class Testactividad2 {
         List<Vehiculo> colVehiculos = new ArrayList<>();
 
         //Agregamos los vehículos a la colección
-
         colVehiculos.add(auto1);
         colVehiculos.add(moto1);
         colVehiculos.add(auto2);
         colVehiculos.add(moto2);
         //colVehiculos.add(auto3);
-        // System.out.println(auto1);
-        // System.out.println(moto1);
-        // System.out.println(auto2);
-        // System.out.println(moto2);
 
         colVehiculos.forEach(System.out::println);
 
