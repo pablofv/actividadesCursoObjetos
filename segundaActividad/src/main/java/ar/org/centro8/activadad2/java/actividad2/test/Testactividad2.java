@@ -3,6 +3,7 @@ package ar.org.centro8.activadad2.java.actividad2.test;
 
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import ar.org.centro8.activadad2.java.actividad2.entities.Auto;
@@ -34,6 +35,24 @@ public class Testactividad2 {
         // System.out.println(moto2);
 
         colVehiculos.forEach(System.out::println);
+
+        System.out.println("\n\n=============================\n\n");
+
+        //Próxima tanda de resultados
+
+        // Vehículo más caro: Peugeot 208
+        // Vehículo más barato: Honda Titan
+        // Vehículo que contiene en el modelo la letra ‘Y’: Yamaha YBR $80.500,50
+
+        //El vehículo mas caro
+        //Consultar que pasa si hay mas de un vehículo mas caro.
+        Vehiculo vehMasCaro;
+        vehMasCaro = colVehiculos
+            .stream()
+            .max(Comparator.comparingDouble(Vehiculo::getPrecio))
+            .get();
+        
+        System.out.println("Vehículo más caro: " + vehMasCaro.getMarca() + " " + vehMasCaro.getModelo());
 
     }
 
