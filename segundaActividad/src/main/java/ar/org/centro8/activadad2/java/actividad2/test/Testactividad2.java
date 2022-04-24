@@ -2,6 +2,7 @@ package ar.org.centro8.activadad2.java.actividad2.test;
 
 
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -57,6 +58,14 @@ public class Testactividad2 {
                                 .get();
         
         System.out.println("Vehículo más barato: " + vehMasBarato.getMarca() + " " + vehMasBarato.getModelo());
+
+        //El vehículo que contiene la letra Y
+        List<Vehiculo> vehConLetraY;;
+        DecimalFormat df=new DecimalFormat("###,###.00");
+        vehConLetraY = colVehiculos
+                                .stream()
+                                .filter(p->p.getModelo().toLowerCase().contains("y")).toList();
+        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));                                
     }
 
 
