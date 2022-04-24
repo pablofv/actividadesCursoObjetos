@@ -36,6 +36,48 @@ public class Testactividad2 {
 
         vehiculoMasCaro(colVehiculos);
 
+        vehiculoMasBarato(colVehiculos);
+
+        vehiculosConLetraY(colVehiculos);
+    
+        System.out.println("\n\n=============================\n\n");
+    
+        ordenadosPorPrecioDesc(colVehiculos);
+        
+        System.out.println("\n\n=============================\n\n");
+
+        ordenadosPorCompareTO(colVehiculos);
+    }
+
+    private static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
+        //Ordenados por compareTO (orden natural)
+        System.out.println("Vehículos ordenados por orden natural (por marca,modelo,precio):");
+        colVehiculos
+                    .stream()
+                    .sorted()
+                    .forEach(System.out::println);
+    }
+
+    private static void ordenadosPorPrecioDesc(List<Vehiculo> colVehiculos) {
+        // Ordenados por precio, de mayor a menor
+        System.out.println("Vehículos ordenados por precio de mayor a menor:");
+        colVehiculos
+                    .stream()
+                    .sorted(Comparator.comparing(v->v.getPrecio()*-1))
+                    .forEach(v->System.out.println(v.getMarca() + " " + v.getModelo()));
+    }
+
+    private static void vehiculosConLetraY(List<Vehiculo> colVehiculos) {
+        //El vehículo que contiene la letra Y
+        List<Vehiculo> vehConLetraY;;
+        DecimalFormat df=new DecimalFormat("###,###.00");
+        vehConLetraY = colVehiculos
+                                .stream()
+                                .filter(p->p.getModelo().toLowerCase().contains("y")).toList();
+        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
+    }
+
+    private static void vehiculoMasBarato(List<Vehiculo> colVehiculos) {
         //El vehículo mas barato
         Vehiculo vehMasBarato;
         vehMasBarato = colVehiculos
@@ -44,32 +86,6 @@ public class Testactividad2 {
                                 .get();
         
         System.out.println("Vehículo más barato: " + vehMasBarato.getMarca() + " " + vehMasBarato.getModelo());
-
-        //El vehículo que contiene la letra Y
-        List<Vehiculo> vehConLetraY;;
-        DecimalFormat df=new DecimalFormat("###,###.00");
-        vehConLetraY = colVehiculos
-                                .stream()
-                                .filter(p->p.getModelo().toLowerCase().contains("y")).toList();
-        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
-    
-        System.out.println("\n\n=============================\n\n");
-    
-        // Ordenados por precio, de mayor a menor
-        System.out.println("Vehículos ordenados por precio de mayor a menor:");
-        colVehiculos
-                    .stream()
-                    .sorted(Comparator.comparing(v->v.getPrecio()*-1))
-                    .forEach(v->System.out.println(v.getMarca() + " " + v.getModelo()));
-        
-        System.out.println("\n\n=============================\n\n");
-
-        //Ordenados por compareTO (orden natural)
-        System.out.println("Vehículos ordenados por orden natural (por marca,modelo,precio):");
-        colVehiculos
-                    .stream()
-                    .sorted()
-                    .forEach(System.out::println);
     }
 
     private static void vehiculoMasCaro(List<Vehiculo> colVehiculos) {
