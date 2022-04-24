@@ -51,6 +51,10 @@ public class TestPabloMasVehiculos {
         colVehiculos.add(auto9);
         colVehiculos.add(auto0);
 
+        // auto0.compareToPrueba(auto3);
+        // auto3.compareToPrueba(auto9);
+        // auto9.compareToPrueba(auto0);
+
         colVehiculos.forEach(System.out::println);
 
         System.out.println("\n\n=============================\n\n");
