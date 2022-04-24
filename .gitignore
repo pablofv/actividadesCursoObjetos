@@ -1,0 +1,8 @@
+
+*.md
+segundaActividad/mvnw
+*.xml
+*.class
+*.properties
+*.cmd
+*.jar
