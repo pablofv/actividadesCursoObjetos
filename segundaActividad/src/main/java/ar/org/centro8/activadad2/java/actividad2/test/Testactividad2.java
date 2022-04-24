@@ -73,6 +73,7 @@ public class Testactividad2 {
         System.out.println("\n\n=============================\n\n");
 
         //Ordenados por compareTO (orden natural)
+        System.out.println("Vehículos ordenados por orden natural (por marca,modelo,precio):");
         colVehiculos
                     .stream()
                     .sorted()
