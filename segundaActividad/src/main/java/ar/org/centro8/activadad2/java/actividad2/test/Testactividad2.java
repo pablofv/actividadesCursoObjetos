@@ -76,4 +76,15 @@ public class Testactividad2 {
 
     
     
+        // Vehículos ordenados por precio de mayor a menor:
+        // Peugeot 208
+        // Peugeot 206
+        // Yamaha YBR
+        // Honda Titan
+        System.out.println("Vehículos ordenados por precio de mayor a menor:");
+        colVehiculos
+                    .stream()
+                    .sorted(Comparator.comparing(v->v.getPrecio()*-1))
+                    .forEach(v->System.out.println(v.getMarca() + " " + v.getModelo()));
+    }
 }
