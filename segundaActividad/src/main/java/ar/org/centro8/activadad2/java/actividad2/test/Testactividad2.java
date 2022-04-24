@@ -34,12 +34,6 @@ public class Testactividad2 {
 
         System.out.println("\n\n=============================\n\n");
 
-        //Próxima tanda de resultados
-
-        // Vehículo más caro: Peugeot 208
-        // Vehículo más barato: Honda Titan
-        // Vehículo que contiene en el modelo la letra ‘Y’: Yamaha YBR $80.500,50
-
         //El vehículo mas caro
         //Consultar que pasa si hay mas de un vehículo mas caro.
         Vehiculo vehMasCaro;
@@ -65,15 +59,9 @@ public class Testactividad2 {
         vehConLetraY = colVehiculos
                                 .stream()
                                 .filter(p->p.getModelo().toLowerCase().contains("y")).toList();
-        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));                                
-    }
-
-
-
+        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
     
-
-    
-
+        System.out.println("\n\n=============================\n\n");
     
     
         // Vehículos ordenados por precio de mayor a menor:
