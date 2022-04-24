@@ -49,7 +49,7 @@ public class Testactividad2 {
         ordenadosPorCompareTO(colVehiculos);
     }
 
-    private static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
+    protected static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
         //Ordenados por compareTO (orden natural)
         System.out.println("Vehículos ordenados por orden natural (por marca,modelo,precio):");
         colVehiculos
@@ -58,7 +58,7 @@ public class Testactividad2 {
                     .forEach(System.out::println);
     }
 
-    private static void ordenadosPorPrecioDesc(List<Vehiculo> colVehiculos) {
+    protected static void ordenadosPorPrecioDesc(List<Vehiculo> colVehiculos) {
         // Ordenados por precio, de mayor a menor
         System.out.println("Vehículos ordenados por precio de mayor a menor:");
         colVehiculos
@@ -67,7 +67,7 @@ public class Testactividad2 {
                     .forEach(v->System.out.println(v.getMarca() + " " + v.getModelo()));
     }
 
-    private static void vehiculosConLetraY(List<Vehiculo> colVehiculos) {
+    protected static void vehiculosConLetraY(List<Vehiculo> colVehiculos) {
         //El vehículo que contiene la letra Y
         List<Vehiculo> vehConLetraY;;
         DecimalFormat df=new DecimalFormat("###,###.00");
@@ -77,7 +77,7 @@ public class Testactividad2 {
         vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
     }
 
-    private static void vehiculoMasBarato(List<Vehiculo> colVehiculos) {
+    protected static void vehiculoMasBarato(List<Vehiculo> colVehiculos) {
         //El vehículo mas barato
         Vehiculo vehMasBarato;
         vehMasBarato = colVehiculos
@@ -88,7 +88,7 @@ public class Testactividad2 {
         System.out.println("Vehículo más barato: " + vehMasBarato.getMarca() + " " + vehMasBarato.getModelo());
     }
 
-    private static void vehiculoMasCaro(List<Vehiculo> colVehiculos) {
+    protected static void vehiculoMasCaro(List<Vehiculo> colVehiculos) {
         //El vehículo mas caro
         //Consultar que pasa si hay mas de un vehículo mas caro.
         Vehiculo vehMasCaro;
