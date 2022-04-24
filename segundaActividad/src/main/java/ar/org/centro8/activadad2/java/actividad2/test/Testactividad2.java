@@ -16,7 +16,7 @@ public class Testactividad2 {
         Auto auto1 = new Auto("Peugeot", "206", 200000d, 4);
         Moto moto1 = new Moto("Honda", "Titán", 60000d, "125c");
         Auto auto2 = new Auto("Peugeot", "208", 250000d, 5);
-        Moto moto2 = new Moto("Yamaha", "Ybr", 80500.5d, "160c");
+        Moto moto2 = new Moto("Yamaha", "YBR", 80500.5d, "160c");
 
         // que pasa si tengo 2 vehículos mas caros
         //Auto auto3 = new Auto("Peugeot", "207", 250000d, 5);
