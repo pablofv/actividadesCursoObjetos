@@ -18,7 +18,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
     public String toString() {
         //Modelo de ejmplo de salida
         //Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
-        return "Marca:" + marca + " // Modelo:" + modelo;
+        return "Marca: " + marca + " // Modelo: " + modelo;
     }
 
     public int compareTo(Vehiculo vehiculo){
