@@ -15,10 +15,10 @@ public class Testactividad2 {
     //Hacemos la variable de ambito mas amplio
     static List<Vehiculo> colVehiculos = new ArrayList<>();
     public static void main(String[] args) {
-        //cargarVehiculos();
+        cargarVehiculos();
 
         //si quiero usar otro juego de datos
-        cargarMasVehiculos();
+        //cargarMasVehiculos();
 
         mostrarVehiculos();
 
