@@ -54,7 +54,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     public String precioConFormato(){
         //En este método, voy a poner la máscara para que los precios se devuelvan con dos decimales aunque no tengan en el precio.
-        DecimalFormat df = new DecimalFormat("###.00"); //Voy a considerar hasta un precio de 999 millones
+        DecimalFormat df = new DecimalFormat("###,###.00"); //Separador de miles y dos decimales
         return df.format(this.getPrecio()).toLowerCase(); //Obtenemos el precio, el aplicamos el formato y lo pasamos a minúsculas
     }
 
