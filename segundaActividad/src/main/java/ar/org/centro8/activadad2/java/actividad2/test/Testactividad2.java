@@ -117,13 +117,25 @@ public class Testactividad2 {
 
     private static void vehiculoMasCaro(List<Vehiculo> colVehiculos) {
         //El vehículo mas caro
-        //Consultar que pasa si hay mas de un vehículo mas caro.
-        Vehiculo vehMasCaro;
-        vehMasCaro = colVehiculos
+        Double precioMaximo;
+        List<Vehiculo> vehiculosMasCaros;
+        //Primero buscamos cual es el precio mas caro
+        precioMaximo = colVehiculos
                                 .stream()
                                 .max(Comparator.comparingDouble(Vehiculo::getPrecio))
-                                .get();
+                                .get()
+                                .getPrecio();
+        //Una vez que sabemos el precio máximo, buscamos todos los vehículos que tienen ese precio.
+        vehiculosMasCaros = colVehiculos
+                                .stream()
+                                .filter(v->v.getPrecio().equals(precioMaximo))
+                                .toList();
+        // Vehiculo vehMasCaro;
+        // vehMasCaro = colVehiculos
+        //                         .stream()
+        //                         .max(Comparator.comparingDouble(Vehiculo::getPrecio))
+        //                         .get();
         
-        System.out.println("Vehículo más caro: " + vehMasCaro.getMarca() + " " + vehMasCaro.getModelo());
+        vehiculosMasCaros.forEach(v->System.out.println("Vehículo más caro: " + v.getMarca() + " " + v.getModelo()));
     }
 }
