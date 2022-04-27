@@ -12,6 +12,8 @@ import ar.org.centro8.activadad2.java.actividad2.entities.Moto;
 import ar.org.centro8.activadad2.java.actividad2.entities.Vehiculo;
 
 public class Testactividad2 {
+    //Hacemos la variable de ambito mas amplio
+    static List<Vehiculo> colVehiculos = new ArrayList<>();
     public static void main(String[] args) {
         Auto auto1 = new Auto("Peugeot", "206", 200000d, 4);
         Moto moto1 = new Moto("Honda", "Titán", 60000d, "125c");
@@ -21,7 +23,6 @@ public class Testactividad2 {
         // que pasa si tengo 2 vehículos mas caros
         //Auto auto3 = new Auto("Peugeot", "207", 250000d, 5);
 
-        List<Vehiculo> colVehiculos = new ArrayList<>();
 
         //Agregamos los vehículos a la colección
         colVehiculos.add(auto1);
