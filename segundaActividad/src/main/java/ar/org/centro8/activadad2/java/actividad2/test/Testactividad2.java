@@ -15,21 +15,11 @@ public class Testactividad2 {
     //Hacemos la variable de ambito mas amplio
     static List<Vehiculo> colVehiculos = new ArrayList<>();
     public static void main(String[] args) {
-        Auto auto1 = new Auto("Peugeot", "206", 200000d, 4);
-        Moto moto1 = new Moto("Honda", "Titán", 60000d, "125c");
-        Auto auto2 = new Auto("Peugeot", "208", 250000d, 5);
-        Moto moto2 = new Moto("Yamaha", "YBR", 80500.5d, "160c");
+        //cargarVehiculos();
 
         // que pasa si tengo 2 vehículos mas caros
         //Auto auto3 = new Auto("Peugeot", "207", 250000d, 5);
 
-
-        //Agregamos los vehículos a la colección
-        colVehiculos.add(auto1);
-        colVehiculos.add(moto1);
-        colVehiculos.add(auto2);
-        colVehiculos.add(moto2);
-        //colVehiculos.add(auto3);
 
         colVehiculos.forEach(System.out::println);
 
@@ -51,6 +41,14 @@ public class Testactividad2 {
     }
 
     protected static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
+    private static void cargarVehiculos() {
+        //creo los vehículos y los agrego a la colección.
+        colVehiculos.add(new Auto("Peugeot", "206", 200000d, 4));
+        colVehiculos.add(new Moto("Honda", "Titán", 60000d, "125c"));
+        colVehiculos.add(new Auto("Peugeot", "208", 250000d, 5));
+        colVehiculos.add(new Moto("Yamaha", "YBR", 80500.5d, "160c"));
+    }
+
         //Ordenados por compareTO (orden natural)
         System.out.println("Vehículos ordenados por orden natural (por marca,modelo,precio):");
         colVehiculos
