@@ -26,8 +26,8 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         //esteVehiculo es el propio objeto
         //vehiculoParametro es el objeto que recibe por parámetro, contra el cual se comparará
 
-        String esteVehiculo =          (this.getMarca().toLowerCase() + "," +     this.getModelo().toLowerCase() + "," +     this.precioConFormato());
-        String vehiculoParametro = (vehiculo.getMarca().toLowerCase() + "," + vehiculo.getModelo().toLowerCase() + "," + vehiculo.precioConFormato());
+        String esteVehiculo =          (this.getMarca().toLowerCase() + "," +     this.getModelo().toLowerCase() + "," +     this.precioParaCompararString());
+        String vehiculoParametro = (vehiculo.getMarca().toLowerCase() + "," + vehiculo.getModelo().toLowerCase() + "," + vehiculo.precioParaCompararString());
         //return esteVehiculo.compareTo(vehiculoParametro)*-1;
         return esteVehiculo.compareTo(vehiculoParametro);
     }
@@ -53,7 +53,13 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
     }
 
     public String precioConFormato(){
-        //Voy a crear la máscara aquí, para que este método devuelva el precio con el formato establecido, y no haya que cambiar el formato en otros lugares
+        //En este método, voy a poner la máscara para que los precios se devuelvan con dos decimales aunque no tengan en el precio.
+        DecimalFormat df = new DecimalFormat("###.00"); //Voy a considerar hasta un precio de 999 millones
+        return df.format(this.getPrecio()).toLowerCase(); //Obtenemos el precio, el aplicamos el formato y lo pasamos a minúsculas
+    }
+
+    public String precioParaCompararString(){
+        //En este método, voy a utlizar la máscara que rellene con ceros adelante, para que cuando se convierta a string y se comparen, no den resultados equivocados.
         DecimalFormat df = new DecimalFormat("000,000,000.00"); //Voy a considerar hasta un precio de 999 millones
         return df.format(this.getPrecio()).toLowerCase(); //Obtenemos el precio, el aplicamos el formato y lo pasamos a minúsculas
     }
