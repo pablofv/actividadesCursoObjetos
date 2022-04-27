@@ -116,7 +116,7 @@ public class Testactividad2 {
 
     private static void vehiculoMasCaro(List<Vehiculo> colVehiculos) {
         //El vehículo mas caro
-        Double precioMaximo;
+        double precioMaximo;
         List<Vehiculo> vehiculosMasCaros;
         //Primero buscamos cual es el precio mas caro
         precioMaximo = colVehiculos

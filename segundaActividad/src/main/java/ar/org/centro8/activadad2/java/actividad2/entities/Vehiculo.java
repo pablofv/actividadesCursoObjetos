@@ -5,10 +5,10 @@ import java.text.DecimalFormat;
 public abstract class Vehiculo implements Comparable<Vehiculo> {
     private String marca;
     private String modelo;
-    private Double precio;
+    private double precio;
     
     //Constructor
-    public Vehiculo(String marca, String modelo, Double precio) {
+    public Vehiculo(String marca, String modelo, double precio) {
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;
@@ -48,7 +48,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         this.modelo = modelo;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -58,7 +58,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return df.format(this.getPrecio()).toLowerCase(); //Obtenemos el precio, el aplicamos el formato y lo pasamos a minúsculas
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 

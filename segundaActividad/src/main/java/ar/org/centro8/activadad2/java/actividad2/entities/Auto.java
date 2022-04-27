@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Auto extends Vehiculo{
     private int nroPuertas;
 
-    public Auto(String marca, String modelo, Double precio, int nroPuertas) {
+    public Auto(String marca, String modelo, double precio, int nroPuertas) {
         super(marca, modelo, precio);
         this.nroPuertas = nroPuertas;
     }

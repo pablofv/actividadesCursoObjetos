@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Moto extends Vehiculo{
     private String cilindrada;
 
-    public Moto(String marca, String modelo, Double precio, String cilindrada) {
+    public Moto(String marca, String modelo, double precio, String cilindrada) {
         super(marca, modelo, precio);
         this.cilindrada = cilindrada;
     }
