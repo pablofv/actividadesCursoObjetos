@@ -22,8 +22,7 @@ public class Testactividad2 {
         //si quiero usar otro juego de datos
         cargarMasVehiculos();
 
-
-        colVehiculos.forEach(System.out::println);
+        mostrarVehiculos();
 
         System.out.println("\n\n=============================\n\n");
 
@@ -43,6 +42,10 @@ public class Testactividad2 {
     }
 
     protected static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
+    private static void mostrarVehiculos() {
+        colVehiculos.forEach(System.out::println);
+    }
+
     private static void cargarVehiculos() {
         //creo los vehículos y los agrego a la colección.
         colVehiculos.add(new Auto("Peugeot", "206", 200000d, 4));
