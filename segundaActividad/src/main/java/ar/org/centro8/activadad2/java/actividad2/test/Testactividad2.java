@@ -101,7 +101,8 @@ public class Testactividad2 {
         DecimalFormat df=new DecimalFormat("###,###.00");
         vehConLetraY = colVehiculos
                                 .stream()
-                                .filter(p->p.getModelo().toLowerCase().contains("y")).toList();
+                                .filter(p->p.getModelo().toLowerCase().contains("y"))
+                                .toList();
         vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
     }
 
