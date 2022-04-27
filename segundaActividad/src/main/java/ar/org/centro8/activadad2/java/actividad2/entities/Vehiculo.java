@@ -62,6 +62,12 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return precio;
     }
 
+    public String precioConFormato(){
+        //Voy a crear la máscara aquí, para que este método devuelva el precio con el formato establecido, y no haya que cambiar el formato en otros lugares
+        DecimalFormat df = new DecimalFormat("000,000,000.00"); //Voy a considerar hasta un precio de 999 millones
+        return df.format(this.getPrecio()).toLowerCase(); //Obtenemos el precio, el aplicamos el formato y lo pasamos a minúsculas
+    }
+
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
