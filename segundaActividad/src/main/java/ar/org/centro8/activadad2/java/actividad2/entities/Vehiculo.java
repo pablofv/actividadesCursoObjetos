@@ -23,23 +23,13 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     public int compareTo(Vehiculo vehiculo){
         //Marca, modelo y precio
-        //thisVehiculo es el propio objeto
-        //paraVehiculo es el objeto que recibe por parámetro, contra el cual se comparará
+        //esteVehiculo es el propio objeto
+        //vehiculoParametro es el objeto que recibe por parámetro, contra el cual se comparará
 
-        DecimalFormat df=new DecimalFormat("000,000,000.00");
-        String thisVehiculo = (this.getMarca()+","+this.getModelo()+","+df.format(this.getPrecio())).toLowerCase();
-        String paraVehiculo = (vehiculo.getMarca()+","+vehiculo.getModelo()+","+df.format(vehiculo.getPrecio())).toLowerCase();
-        //return thisVehiculo.compareTo(paraVehiculo)*-1;
-        return thisVehiculo.compareTo(paraVehiculo);
-
-    }
-    public void compareToPrueba(Vehiculo vehiculo){
-        DecimalFormat df=new DecimalFormat("000,000,000.00");
-        System.out.println("CompareTo");
-        String thisVehiculo = (this.getMarca()+","+this.getModelo()+","+df.format(this.getPrecio())).toLowerCase();
-        String paraVehiculo = (vehiculo.getMarca()+","+vehiculo.getModelo()+","+df.format(vehiculo.getPrecio())).toLowerCase();
-        System.out.println("thisvehiculo: " + thisVehiculo);
-        System.out.println("paravehiculo: " + paraVehiculo);
+        String esteVehiculo =          (this.getMarca().toLowerCase() + "," +     this.getModelo().toLowerCase() + "," +     this.precioConFormato());
+        String vehiculoParametro = (vehiculo.getMarca().toLowerCase() + "," + vehiculo.getModelo().toLowerCase() + "," + vehiculo.precioConFormato());
+        //return esteVehiculo.compareTo(vehiculoParametro)*-1;
+        return esteVehiculo.compareTo(vehiculoParametro);
     }
 
     public String getMarca() {
