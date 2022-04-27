@@ -19,6 +19,8 @@ public class Testactividad2 {
 
         // que pasa si tengo 2 vehículos mas caros
         //Auto auto3 = new Auto("Peugeot", "207", 250000d, 5);
+        //si quiero usar otro juego de datos
+        cargarMasVehiculos();
 
 
         colVehiculos.forEach(System.out::println);
@@ -47,6 +49,26 @@ public class Testactividad2 {
         colVehiculos.add(new Moto("Honda", "Titán", 60000d, "125c"));
         colVehiculos.add(new Auto("Peugeot", "208", 250000d, 5));
         colVehiculos.add(new Moto("Yamaha", "YBR", 80500.5d, "160c"));
+    }
+
+    private static void cargarMasVehiculos(){
+        //creo los vehículos y los agrego a la colección.
+        colVehiculos.add( new Auto("Peugeot", "206", 200000d, 4));
+        colVehiculos.add( new Auto("Peugeot", "208", 250000d, 5));
+        colVehiculos.add( new Auto("Fiat", "Precio 8", 1000000d, 5));
+        colVehiculos.add( new Auto("Vw", "Precio 6", 1300000d, 4));
+        colVehiculos.add( new Auto("Audi", "Precio 2", 2300000d, 4));
+        colVehiculos.add( new Auto("Alfa", "Precio 4", 1800000d, 5));
+        colVehiculos.add( new Auto("Audi", "A4 Precio 1", 2600000d, 4));
+        colVehiculos.add( new Auto("Audi", "A3 Precio 3", 2200000d, 5));
+        colVehiculos.add( new Auto("Fiat", "Precio 8", 900000d, 5));
+        colVehiculos.add( new Auto("Fiat", "Precio 8", 700000d, 5));
+        colVehiculos.add( new Moto("Honda", "Titán", 60000d, "125c"));
+        colVehiculos.add( new Moto("Yamaha", "YBR", 80500.5d, "160c"));
+        colVehiculos.add( new Moto("Ducati", "Precio 5", 1550000.30d, "160c"));
+        colVehiculos.add( new Moto("kawasaki", "Precio 7", 1200000d, "160c"));
+        colVehiculos.add( new Moto("Zanella", "Precio 9", 350000d, "160c"));
+        colVehiculos.add( new Moto("Zanella", "Smash Y Precio 14", 50000d, "160c"));
     }
 
         //Ordenados por compareTO (orden natural)
