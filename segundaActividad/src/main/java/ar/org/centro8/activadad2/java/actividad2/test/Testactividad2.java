@@ -96,12 +96,11 @@ public class Testactividad2 {
     private static void vehiculosConLetraY(List<Vehiculo> colVehiculos) {
         //El vehículo que contiene la letra Y
         List<Vehiculo> vehConLetraY;;
-        DecimalFormat df=new DecimalFormat("###,###.00");
         vehConLetraY = colVehiculos
                                 .stream()
                                 .filter(p->p.getModelo().toLowerCase().contains("y"))
                                 .toList();
-        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + df.format(p.getPrecio())));
+        vehConLetraY.forEach(p->System.out.println("Vehículo que contiene en el modelo la letra 'Y': " + p.getMarca() + " " + p.getModelo() + " $" + p.precioConFormato()));
     }
 
     private static void vehiculoMasBarato(List<Vehiculo> colVehiculos) {
