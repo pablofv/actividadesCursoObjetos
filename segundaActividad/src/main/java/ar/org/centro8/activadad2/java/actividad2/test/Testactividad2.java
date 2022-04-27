@@ -127,7 +127,7 @@ public class Testactividad2 {
         //Una vez que sabemos el precio máximo, buscamos todos los vehículos que tienen ese precio.
         vehiculosMasCaros = colVehiculos
                                 .stream()
-                                .filter(v->v.getPrecio().equals(precioMaximo))
+                                .filter(v->v.getPrecio() == precioMaximo)
                                 .toList();
         // Vehiculo vehMasCaro;
         // vehMasCaro = colVehiculos
