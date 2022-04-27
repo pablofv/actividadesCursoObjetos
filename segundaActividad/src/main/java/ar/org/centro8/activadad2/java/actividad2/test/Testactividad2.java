@@ -17,8 +17,6 @@ public class Testactividad2 {
     public static void main(String[] args) {
         //cargarVehiculos();
 
-        // que pasa si tengo 2 vehículos mas caros
-        //Auto auto3 = new Auto("Peugeot", "207", 250000d, 5);
         //si quiero usar otro juego de datos
         cargarMasVehiculos();
 
