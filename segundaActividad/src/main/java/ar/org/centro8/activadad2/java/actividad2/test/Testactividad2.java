@@ -24,7 +24,7 @@ public class Testactividad2 {
 
         mostrarVehiculos();
 
-        System.out.println("\n\n=============================\n\n");
+        separador();
 
         vehiculoMasCaro(colVehiculos);
 
@@ -32,16 +32,20 @@ public class Testactividad2 {
 
         vehiculosConLetraY(colVehiculos);
     
-        System.out.println("\n\n=============================\n\n");
+        separador();
     
         ordenadosPorPrecioDesc(colVehiculos);
         
-        System.out.println("\n\n=============================\n\n");
+        separador();
 
         ordenadosPorCompareTO(colVehiculos);
     }
 
     protected static void ordenadosPorCompareTO(List<Vehiculo> colVehiculos) {
+    private static void separador() {
+        System.out.println("\n\n=============================\n\n");
+    }
+
     private static void mostrarVehiculos() {
         colVehiculos.forEach(System.out::println);
     }
