@@ -12,9 +12,9 @@ create table productos(
 	id int auto_increment primary key,
     nombre varchar(100) not null,
     marca varchar(40) not null,
-    tipoProducto enum("Carnes", "Verduras", "Panificados", "Frutas", "Lacteos", "Bebidas"),
+    tipoProducto enum("CARNES", "VERDURAS", "PANIFICADOS", "FRUTAS", "LACTEOS", "BEBIDAS"),
     precioCosto int not null,
-    unidad enum("Kg", "Lt", "Unidad"),
+    unidad enum("KG", "LT", "UNIDAD"),
     cantidadPorUnidad int not null
 );
 
@@ -30,6 +30,9 @@ create table facturas(
     totalFacturado double,
     idColegio int /*a quien se le factura*/
 );
+
+alter table facturas
+add constraint foreign key cf_factura_colegio (idColegio) references colegios(id);
 
 create table itemFacturas(
 	id int auto_increment primary key,
