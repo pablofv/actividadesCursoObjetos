@@ -43,6 +43,6 @@ create table itemFacturas(
 );
 
 alter table itemFacturas
-add constraint foreign key(idFactura) references facturas(id);
+add constraint foreign key cf_item_facturas (idFactura) references facturas(id);
 alter table itemFacturas
-add constraint foreign key(idProducto) references productos(id);
+add constraint foreign key cf_item_productos(idProducto) references productos(id);
