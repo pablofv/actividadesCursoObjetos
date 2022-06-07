@@ -3,7 +3,7 @@ DROP DATABASE if EXISTS distribuidora;
 CREATE DATABASE distribuidora;
 use distribuidora;
 */
-DROP TABLE if EXISTS itemFacturas;
+DROP TABLE if EXISTS itemfacturas;
 DROP TABLE if EXISTS facturas;
 DROP TABLE if EXISTS colegios;
 DROP TABLE if EXISTS productos;
@@ -34,7 +34,7 @@ create table facturas(
 alter table facturas
 add constraint foreign key cf_factura_colegio (idColegio) references colegios(id);
 
-create table itemFacturas(
+create table itemfacturas(
 	id int auto_increment primary key,
     idFactura int not null,
     idProducto int not null,
@@ -42,7 +42,7 @@ create table itemFacturas(
     precioUnitario double not null
 );
 
-alter table itemFacturas
+alter table itemfacturas
 add constraint foreign key cf_item_facturas (idFactura) references facturas(id);
-alter table itemFacturas
+alter table itemfacturas
 add constraint foreign key cf_item_productos(idProducto) references productos(id);

@@ -27,57 +27,57 @@ INSERT INTO distribuidora.productos(nombre, marca, tipoProducto, precioCosto, un
 				/*6*/			values ('Naranja', 'Cepita', 'BEBIDAS', 120, 'LT', 1);
 
 insert into distribuidora.facturas(fechaFactura, totalFacturado, idColegio) -- 1
-							values('2021-11-13', 18000, 1);
+							values('2021-11-13', null, 1);
 insert into distribuidora.facturas(fechaFactura, totalFacturado, idColegio) -- 2
-							values('2021-12-02', 22900, 6);
+							values('2021-12-02', null, 6);
 insert into distribuidora.facturas(fechaFactura, totalFacturado, idColegio) -- 3
-							values('2022-02-25', 26100, 4);
+							values('2022-02-25', null, 4);
 insert into distribuidora.facturas(fechaFactura, totalFacturado, idColegio) -- 4
-							values('2022-03-07', 32200, 2);
+							values('2022-03-07', null, 2);
 insert into distribuidora.facturas(fechaFactura, totalFacturado, idColegio) -- 5
-							values('2022-05-23', 39500, 4);
+							values('2022-05-23', null, 4);
 
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(1, 1, 50, 110); -- 5500
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(1, 3, 20, 100); -- 2000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(1, 4, 3, 1000); -- 3000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(1, 6, 50, 150); -- 7500
                             /* fact 2 */
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(2, 1, 50, 110); -- 5500
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(2, 4, 3.9, 1000); -- 3900
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(2, 5, 100, 120); -- 12000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(2, 6, 10, 150); -- 1500
                                 /*fact3*/
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(3, 1, 100, 110); -- 11100
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(3, 2, 50, 25); -- 1250
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(3, 3, 137.5, 100); -- 13750
                                 /* fact4*/
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(4, 4, 15, 1000); -- 15000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(4, 5, 100, 120); -- 12000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(4, 6, 26, 200); -- 5200
                                 /*fact 5*/
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(5, 1, 50, 110); -- 5500
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(5, 2, 620, 25); -- 15500
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(5, 3, 20, 100); -- 2000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(5, 4, 15, 1000); -- 15000
-insert into distribuidora.itemFacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
+insert into distribuidora.itemfacturas(idFactura, idProducto, cantidadProducto, precioUnitario)
 								values(5, 6, 10, 150); -- 1500
 
 
