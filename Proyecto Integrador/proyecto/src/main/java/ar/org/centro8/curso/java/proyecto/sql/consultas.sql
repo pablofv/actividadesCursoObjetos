@@ -7,7 +7,7 @@ select *
 from facturas;
 
 select *
-from itemfacturas;
+from itemFacturas;
 
 select *
 from productos;
@@ -15,7 +15,7 @@ from productos;
 -- Actualizamos el total de las facturas
 update facturas f
 set totalFacturado = (select sum(cantidadProducto * precioUnitario)
-					  from itemfacturas ifa
+					  from itemFacturas ifa
                       where ifa.idFactura = f.id)
 ;
 
@@ -28,5 +28,5 @@ order by c.id;
 
 -- Los productos de cada factura
 select f.id, f.fechaFactura, p.nombre producto_facturado
-from facturas f join itemfacturas ifa on f.id = ifa.idFactura
+from facturas f join itemFacturas ifa on f.id = ifa.idFactura
 				join productos p on ifa.idProducto = p.id;
