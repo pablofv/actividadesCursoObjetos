@@ -13,9 +13,9 @@ create table productos(
     nombre varchar(100) not null,
     marca varchar(40) not null,
     tipoProducto enum('CARNES', 'VERDURAS', 'PANIFICADOS', 'FRUTAS', 'LACTEOS', 'BEBIDAS'),
-    precioCosto int not null,
+    precioCosto double not null,
     unidad enum('KG', 'LT', 'UNIDAD'),
-    cantidadPorUnidad numeric(6,2) not null
+    cantidadPorUnidad double not null
 );
 
 create table colegios(

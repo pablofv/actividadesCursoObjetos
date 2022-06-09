@@ -6,14 +6,17 @@ public class ItemFactura {
     private int idProducto;
     private double cantidadProducto;
     private double precioUnitario;
-    public ItemFactura(int id, int idFactura, int idProducto, double cantidadProducto, double precioUnitario) {
-        this.id = id;
+    
+    public ItemFactura() {
+    }
+    public ItemFactura(int idFactura, int idProducto, double cantidadProducto, double precioUnitario) {
         this.idFactura = idFactura;
         this.idProducto = idProducto;
         this.cantidadProducto = cantidadProducto;
         this.precioUnitario = precioUnitario;
     }
-    public ItemFactura(int idFactura, int idProducto, double cantidadProducto, double precioUnitario) {
+    public ItemFactura(int id, int idFactura, int idProducto, double cantidadProducto, double precioUnitario) {
+        this.id = id;
         this.idFactura = idFactura;
         this.idProducto = idProducto;
         this.cantidadProducto = cantidadProducto;
