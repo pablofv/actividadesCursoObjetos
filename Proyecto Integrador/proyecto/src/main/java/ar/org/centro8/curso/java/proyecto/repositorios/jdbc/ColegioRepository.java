@@ -57,6 +57,7 @@ public class ColegioRepository implements I_ColegioRepository {
                 "update colegios set nombre = ?, direccion = ? where id = ?")) {
                 ps.setString(1, colegio.getNombre());
                 ps.setString(2, colegio.getDireccion());
+                ps.setInt(3, colegio.getId());
                 ps.execute();
         } catch (Exception e) {
             System.out.println(e);
