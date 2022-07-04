@@ -22,7 +22,7 @@
         if(new TextValidator(nombre).length(3, 50) &&
            new TextValidator(marca).length(3, 50)){
            Producto producto = new Producto(nombre, marca, tipoProducto, precioCosto, unidad, cantidadPorUnidad);
-           out.println(producto.toString());
+           System.out.println(producto.toString());
            new ProductoRepository(Connector.getConnection()).save(producto);
            out.println("<div class='info'>se guardo el curso id: " + producto.getId() + "</div>");
         }else{
