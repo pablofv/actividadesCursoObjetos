@@ -8,10 +8,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <%@include file="jsp/head.jsp" %>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%@include file = "jsp/menu.jsp"%>
+        <h1>Alta de Facturas</h1>
+        <div class = "form">
+            <table>
+                <tr>
+                    <td><label class = "label">Fecha:</label></td>
+                    <td><input type = "datetime-local"></td>
+                </tr>
+                <tr>
+                    <td><label class = "label">Colegio:</label></td>
+                    <td>
+                        <select name = "colegio" class "input2">
+                            <%@include file = "jsp/listaColegio.jsp" %>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
