@@ -61,3 +61,4 @@
        <%@include file="jsp/productosAltas.jsp" %>
     </div>
 </body>
+</html>
