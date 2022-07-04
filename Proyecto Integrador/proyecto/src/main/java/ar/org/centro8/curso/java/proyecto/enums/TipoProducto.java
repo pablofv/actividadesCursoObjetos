@@ -7,7 +7,6 @@ public enum TipoProducto {
     PANIFICADOS,
     FRUTAS,
     LACTEOS,
-    BEBIDAS,
-    YERBA
+    BEBIDAS
 }
 
