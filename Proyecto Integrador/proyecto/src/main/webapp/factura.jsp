@@ -17,7 +17,7 @@
             <table>
                 <tr>
                     <td><label class = "label">Fecha:</label></td>
-                    <td><input type = "datetime-local"></td>
+                    <td><input type = "datetime-local" name="fecha"></td>
                 </tr>
                 <tr>
                     <td><label class = "label">Colegio:</label></td>
