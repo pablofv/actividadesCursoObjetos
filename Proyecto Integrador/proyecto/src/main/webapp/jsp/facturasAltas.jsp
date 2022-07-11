@@ -14,10 +14,6 @@
 
 <%
   try{
-  /*public Date getFechaComoFecha(String fechaString) throws ParseException{
-        Date fecha = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(fechaString);
-        return fecha;
-    }*/
         System.out.println("Esto es ITEMFACTURA");
         String fechaFactura = request.getParameter("fecha").replace("T", " "); // "dd/MM/yyyy HH:mm"
         Date fecha2 = new Factura().getFechaComoFecha(fechaFactura, "yyyy-MM-dd HH:mm");
