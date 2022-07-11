@@ -43,8 +43,8 @@ public class TestRepository {
         // cr.update(colegio);
 
         // // Mostrar todos
-        System.out.println("\nTodos\n");
-        cr.getAll().forEach(System.out::println);
+        // System.out.println("\nTodos\n");
+        // cr.getAll().forEach(System.out::println);
 
         // //Buscar por dirección
         // System.out.println("\nBuscando por dirección:\n");

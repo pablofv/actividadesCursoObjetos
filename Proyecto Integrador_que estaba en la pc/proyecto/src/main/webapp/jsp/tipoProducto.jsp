@@ -10,8 +10,5 @@
     for(TipoProducto t: TipoProducto.values()){
         out.println("<option value = '" + t + "'>" + t.toString().toLowerCase()
                      + "</option>");
-        System.out.println("Tipo producto**************************");             
-        System.out.println("<option value = '" + t + "'>" + t.toString().toLowerCase()
-                     + "</option>");
     }
 %>

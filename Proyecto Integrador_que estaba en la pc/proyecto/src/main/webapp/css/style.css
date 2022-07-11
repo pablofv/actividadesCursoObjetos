@@ -1,0 +1,152 @@
+
+/* Bloque de comentario */
+
+body { /* Es el color de todo el fondo */
+    background-color: bisque;
+}
+/* lista sin orden */
+ul { /* Es menú principal */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+/* li = lista desplegable */
+li { /* Tiene que ver con el menú principal, a la izquierda pone las opciones y las separa con 30px */
+    float: left;
+    margin-left: 30px;
+}
+
+li a { /* También modificá el menú */
+    display: grid;
+    color: black;
+    text-align: right;
+    padding: 20px;
+    text-decoration: none;
+}
+/* hover es un evento */
+li a:hover {
+    background-color: chocolate;
+}
+
+.active {
+    background-color: chocolate;
+}
+
+.form{
+    background-color: bisque;
+    display: block;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+ .form table{
+    display: grid;
+    margin: 50px;
+    width: 80%;
+    background-color: darkgreen;
+    float: right;
+    padding: 10%;
+    border-style: solid;
+    border-radius: 5%;
+} 
+
+.input{
+    background-color: black;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 8px;
+    margin-left: 40px;
+    color: white;
+}
+
+.input2{
+    background-color: black;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    width: 210px;
+    margin-top: 8px;
+    margin-left: 40px;
+    color: white;
+}
+
+.label{
+    color: gold;
+    margin-top: 8px;
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: right;
+}
+/*
+.input{
+    background-color: black;
+}
+*/
+.button{
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 120px;
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: chocolate;
+    color: aliceblue;
+    font-size: large;
+}
+
+.button:hover{
+    background-color: darkgoldenrod;
+}
+
+.button:focus{
+    background-color: rgb(88, 9, 42);
+    border-radius: 5px;
+}
+
+.info{
+    background-color: background;
+    color: chartreuse;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.error{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+/* el numeral es el id */
+#tabla{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    display: block;
+    margin: 0px auto;
+    width: 10%;
+}
+
+.datos table tr{
+    color: blue;
+    background-color: greenyellow;
+    padding: 2px;
+}
+
+h1{
+    text-align: center;
+}
+
+td{
+    display: table-cell;
+    vertical-align: inherit;
+}

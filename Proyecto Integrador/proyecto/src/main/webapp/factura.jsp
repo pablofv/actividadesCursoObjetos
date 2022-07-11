@@ -26,6 +26,25 @@
                             <%@include file = "jsp/listaColegio.jsp" %>
                         </select>
                     </td>
+                <tr>
+                    <td><label class = "label"> id Producto: </label></td>
+                    <td>
+                        <select name = "Producto:" class "input2">
+                            <%@include file = "jsp/listaProducto.jsp" %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class = "label"> Cantidad de Producto: </label></td>
+                    <td><input type = "text" class = "input" name = "cantidadProducto"> </td>
+                </tr>
+                <tr>
+                    <td><label class = "label"> Precio Unitario: </label></td>
+                    <td><input type = "text" class = "input" name = "precioUnitario"> </td>
+                </tr>
+                <tr>
+                    <td><input class = "button" type ="reset"  value ="Borrar"  /></td>
+                    <td><input class = "button" type ="submit" value ="Guardar" /></td>
                 </tr>
             </table>
         </div>
