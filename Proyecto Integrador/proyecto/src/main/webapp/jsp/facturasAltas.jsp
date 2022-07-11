@@ -15,7 +15,7 @@
   try{
         System.out.println("Esto es ITEMFACTURA");
         // El control me devuelve la fecha en la forma yyyy-MM-ddTHH:mm
-        Date fecha2 = new Factura().getFechaComoFecha(request.getParameter("fecha").replace("T", " "), "yyyy-MM-dd HH:mm");
+        Date fechaFactura = new Factura().getFechaComoFecha(request.getParameter("fecha").replace("T", " "), "yyyy-MM-dd HH:mm");
         int idColegio = Integer.parseInt(request.getParameter("colegio"));
         System.out.println(idColegio);
         if(fechaFactura != null && idColegio > 0){
