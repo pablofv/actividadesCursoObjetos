@@ -15,7 +15,7 @@
     for (Colegio c:new ColegioRepository(Connector.getConnection()).getAll()){
         System.out.println("********************************");
         out.println("<option value = " + c.getId() + ">" + c.getNombre().toLowerCase()
-                     + "</option>");
+                     + "</option>"); /*probando*/
         System.out.println("********************************");
     }
 %>
