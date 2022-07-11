@@ -14,22 +14,25 @@
         <%@include file = "jsp/menu.jsp"%>
         <h1>Alta de Facturas</h1>
         <div class = "form">
-            <table>
-                <tr>
-                    <td><label class = "label">Fecha:</label></td>
-                    <td><input type = "datetime-local" name="fecha"></td>
-                </tr>
-                <tr>
-                    <td><label class = "label">Colegio:</label></td>
-                    <td>
-                        <select name = "colegio" class "input2">
-                            <%@include file = "jsp/listaColegio.jsp" %>
-                        </select>
-                    </td>
-                </tr>
-                <td><input class = "button" type ="reset"  value ="Borrar"  /></td>
-                <td><input class = "button" type ="submit" value ="Guardar" /></td>
-            </table>
+            <form>
+                <table>
+                    <tr>
+                        <td><label class = "label">Fecha:</label></td>
+                        <td><input type = "datetime-local" name="fecha"></td>
+                    </tr>
+                    <tr>
+                        <td><label class = "label">Colegio:</label></td>
+                        <td>
+                            <select name = "colegio" class "input2">
+                                <%@include file = "jsp/listaColegio.jsp" %>
+                            </select>
+                        </td>
+                    </tr>
+                    <td><input class = "button" type ="reset"  value ="Borrar"  /></td>
+                    <td><input class = "button" type ="submit" value ="Guardar" /></td>
+                </table>
+            </form>
+            <%@include file="jsp/facturasAltas.jsp" %>
         </div>
     </body>
 </html>
