@@ -20,8 +20,8 @@
         System.out.println(idColegio);
         if(fechaFactura != null && idColegio > 0){
             Factura factura = new Factura(fechaFactura, idColegio);
-            new ColegioRepository(Connector.getConnection()).save(colegio);
-            out.println("<div class = 'info'> se guardó el colegio id: " + colegio.getId() +"</div>");
+            new FacturaRepository(Connector.getConnection()).save(factura);
+            out.println("<div class = 'info'> se guardó la factura id: " + factura.getId() +"</div>");
         }else{
             out.println("<div class = 'error'> Falta completar parámetros </div>");
         }
