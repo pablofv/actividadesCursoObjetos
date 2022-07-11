@@ -1,5 +1,6 @@
 package ar.org.centro8.curso.java.proyecto.entities;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -53,5 +54,9 @@ public class Factura {
     }
     public String getFechaComoCadera(){
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(this.getFechaFactura());
+    }
+    public Date getFechaComoFecha(String fechaString) throws ParseException{
+        Date fecha = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(fechaString);
+        return fecha;
     }
 }
