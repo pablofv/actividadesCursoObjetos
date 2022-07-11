@@ -30,7 +30,7 @@
         System.out.println(e);
         System.out.println("*********************");
         if(request.getParameter("titulo") != null){
-            out.println("<div class = 'info'> No se pudo guardar el colegio </div>");
+            out.println("<div class = 'info'> No se pudo guardar la factura </div>");
         }
   }
 %>
