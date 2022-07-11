@@ -7,11 +7,8 @@
 <%@page import="ar.org.centro8.curso.java.proyecto.repositorios.jdbc.FacturaRepository"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.connections.Connector"%>
 <%@page import="java.util.Date"%>
-<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.entities.Factura"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.utils.text.validator.TextValidator"%>
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
