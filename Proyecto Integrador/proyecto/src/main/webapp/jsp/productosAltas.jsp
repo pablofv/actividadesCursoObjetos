@@ -24,7 +24,7 @@
            Producto producto = new Producto(nombre, marca, tipoProducto, precioCosto, unidad, cantidadPorUnidad);
            System.out.println(producto.toString());
            new ProductoRepository(Connector.getConnection()).save(producto);
-           out.println("<div class='info'>se guardo el curso id: " + producto.getId() + "</div>");
+           out.println("<div class='info'>se guardó el producto id: " + producto.getId() + "</div>");
         }else{
             out.println("<div class='error'>Falta completar parámetros</div>");
         }
@@ -33,7 +33,7 @@
             System.out.println(e);
             System.out.println("****************************************************");
             if(request.getParameter("nombre") !=null){
-                out.println("<div class='error'>No se pudo guardar el curso</div>");
+                out.println("<div class='error'>No se pudo guardar el producto</div>");
             }
       }
 %>
