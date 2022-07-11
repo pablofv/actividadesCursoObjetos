@@ -19,13 +19,13 @@
         Date fecha2 = new Factura().getFechaComoFecha(request.getParameter("fecha").replace("T", " "), "yyyy-MM-dd HH:mm");
         int idColegio = Integer.parseInt(request.getParameter("colegio"));
         System.out.println(idColegio);
-      /*  if(fechaFactura != null && idColegio > 0){
+        if(fechaFactura != null && idColegio > 0){
             Factura factura = new Factura(fechaFactura, idColegio);
             new ColegioRepository(Connector.getConnection()).save(colegio);
             out.println("<div class = 'info'> se guardó el colegio id: " + colegio.getId() +"</div>");
         }else{
             out.println("<div class = 'error'> Falta completar parámetros </div>");
-        }*/
+        }
   } catch (Exception e) {
         System.out.println("*********************");
         System.out.println(e);
