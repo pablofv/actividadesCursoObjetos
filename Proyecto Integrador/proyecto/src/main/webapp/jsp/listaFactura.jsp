@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <%
     
-    for (Factura c:new FacturaRepository(Connector.getConnection()).getAll()){
+    for (Factura f:new FacturaRepository(Connector.getConnection()).getAll()){
         System.out.println("********************************");
         out.println("<option value = " + c.getId() + ">" + c.getId()
                      + "</option>");
