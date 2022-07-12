@@ -19,7 +19,7 @@
                     <tr>
                         <td><label class = "label">  Elija la factura: </label></td>
                         <td>
-                            <select name = "factura:" class "input2">
+                            <select name = "factura" class "input2">
                                 <%@include file = "jsp/listaFactura.jsp" %>
                             </select>
                         </td>
@@ -27,7 +27,7 @@
                     <tr>
                         <td><label class = "label"> id Producto: </label></td>
                         <td>
-                            <select name = "producto:" class "input2">
+                            <select name = "producto" class "input2">
                                 <%@include file = "jsp/listaProducto.jsp" %>
                             </select>
                         </td>
