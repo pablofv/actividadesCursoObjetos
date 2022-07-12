@@ -15,6 +15,7 @@
     
     for (Factura f:new FacturaRepository(Connector.getConnection()).getAll()){
         System.out.println("********************************");
+        Colegio colegio = new ColegioRepository(Connector.getConnection()).getById(f.getIdColegio());
         out.println("<option value = " + f.getId() + ">" + f.getId() + " " + f.getFechaFactura() + " " + colegio.getNombre()
                      + "</option>");
         System.out.println("********************************");
