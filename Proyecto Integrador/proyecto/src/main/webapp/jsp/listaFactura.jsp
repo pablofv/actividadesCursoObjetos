@@ -4,6 +4,8 @@
     Author     : Legion
 --%>
 
+<%@page import="ar.org.centro8.curso.java.proyecto.repositorios.jdbc.ColegioRepository"%>
+<%@page import="ar.org.centro8.curso.java.proyecto.entities.Colegio"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.connections.Connector"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.repositorios.jdbc.FacturaRepository"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.entities.Factura"%>
