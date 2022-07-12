@@ -44,6 +44,7 @@
                     <td><input class = "button" type ="submit" value ="Guardar" /></td>
                 </table>
             </form>
+            <%@include file="jsp/itemFacturasAltas.jsp" %>
         </div>
     </body>
 </html>
