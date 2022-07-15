@@ -98,7 +98,7 @@ public class TablaMostrarFacturas {
     public String getFechaComoCadera(){
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(this.getFechaFactura());
     }
-    public Date getFechaComoFecha(String fechaString, String mascara) throws ParseException{
+    private Date getFechaComoFecha(String fechaString, String mascara) throws ParseException{
         Date fecha = new SimpleDateFormat(mascara).parse(fechaString);
         return fecha;
     }
