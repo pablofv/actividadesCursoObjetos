@@ -3,6 +3,7 @@
 
 body { /* Es el color de todo el fondo */
     background-color: bisque;
+    align-content: baseline;
 }
 /* lista sin orden */
 ul { /* Es menú principal */
@@ -131,9 +132,9 @@ li a:hover {
     padding: 8px;
     border-radius: 5px;
     background-color: gainsboro;
-    display: block;
+    display: table-row;
     margin: 0px auto;
-    width: 10%;
+    width: 80%;
 }
 
 .datos table tr{
@@ -149,4 +150,16 @@ h1{
 td{
     display: table-cell;
     vertical-align: inherit;
+}
+#f_buscar{
+    width: 1000px;
+    height: 500px;
+    background-color: beige;
+    margin: inherit;
+}
+#f_tabla{
+    width: 1000px;
+    height: 250px;
+    background-color: beige;
+    margin: auto;
 }
