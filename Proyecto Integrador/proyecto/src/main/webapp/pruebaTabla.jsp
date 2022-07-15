@@ -15,10 +15,8 @@
     <%@include file="jsp/menu.jsp" %>
     <h1>Tabla</h1>
     <form id="f_buscar">
-        <label class="label">Buscar por Número:</label>
+        <label class="label">Buscar por Número de Factura:</label>
         <input type="text" name="buscarTitulo" class="input" />
-    </form>
-    <form id="f_tabla">
+        <td><input class = "button" type ="submit" value ="Buscar" /></td>
         <%@include file="jsp/cursosTabla.jsp" %>
-    </form>
 </body>
