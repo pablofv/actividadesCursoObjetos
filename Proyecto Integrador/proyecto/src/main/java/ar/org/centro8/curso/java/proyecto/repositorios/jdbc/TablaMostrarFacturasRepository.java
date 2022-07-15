@@ -29,19 +29,34 @@ public class TablaMostrarFacturasRepository implements I_TablaMostrarFacturasRep
      * @see ar.org.centro8.curso.java.proyecto.repositorios.interfaces.I_TablaMostrarFacturasRepository#getAll()
      */
     @Override
-    public List<TablaMostrarFacturas>getAll(){
+    public List<TablaMostrarFacturas>getAll(int nroFactura){
         List<TablaMostrarFacturas> list = new ArrayList<>();
+        System.out.println("String de la consulta");
+        System.out.println("select fechaFactura, f.totalFacturado, c.nombre nombreEscuela, " +
+                            "p.nombre nombreProducto, ifa.cantidadProducto, ifa.precioUnitario, ifa.cantidadProducto * ifa.precioUnitario totalFacturadoEnElItem " +
+                            "from facturas f join itemfacturas ifa on f.id = ifa.idFactura " +
+                                            "join productos p on ifa.idProducto = p.id " +
+                                            "join colegios c on f.idColegio = c.id " +
+                            "where f.id = " + nroFactura + " " +
+                            "order by f.id, ifa.id");
+       /* try (ResultSet rs = conn.createStatement().executeQuery("select fechaFactura, f.totalFacturado, c.nombre nombreEscuela, p.nombre nombreProducto, ifa.cantidadProducto, ifa.precioUnitario, ifa.cantidadProducto * ifa.precioUnitario" +
+                                                                "from facturas f, itemfacturas ifa, productos p, colegios c" +
+                                                                "where f.id = 1" +
+                                                                "and f.id = ifa.idFactura" +
+                                                                "and ifa.idProducto = p.id" +
+                                                                "and f.idColegio = c.id" +
+                                                                "order by f.id, ifa.id;")){*/
         try (ResultSet rs = conn.createStatement().executeQuery("select fechaFactura, f.totalFacturado, c.nombre nombreEscuela, " +
-                                                                "p.nombre nombreProducto, ifa.cantidadProducto, ifa.precioUnitario, ifa.cantidadProducto * ifa.precioUnitario" +
-                                                                "from facturas f join itemfacturas ifa on f.id = ifa.idFactura" +
-                                                                                "join productos p on ifa.idProducto = p.id" +
-                                                                                "join colegios c on f.idColegio = c.id" +
-                                                                "where f.id = " + 1 +
-                                                                "order by f.id, ifa.id")){
+                            "p.nombre nombreProducto, ifa.cantidadProducto, ifa.precioUnitario, ifa.cantidadProducto * ifa.precioUnitario totalFacturadoEnElItem " +
+                            "from facturas f join itemfacturas ifa on f.id = ifa.idFactura " +
+                                            "join productos p on ifa.idProducto = p.id " +
+                                            "join colegios c on f.idColegio = c.id " +
+                            "where f.id = " + nroFactura + " " +
+                            "order by f.id, ifa.id")){
             while(rs.next()){
                 list.add(
                     new TablaMostrarFacturas(rs.getString("fechaFactura"),
-                                             "mascara",
+                                             "yyyy-MM-dd HH:mm:ss",
                                              rs.getDouble("totalFacturado"),
                                              rs.getString("nombreEscuela"),
                                              rs.getString("nombreProducto"),
