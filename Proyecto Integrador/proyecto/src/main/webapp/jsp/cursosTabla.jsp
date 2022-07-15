@@ -4,6 +4,9 @@
     Author     : Legion
 --%>
 
+<%@page import="ar.org.centro8.curso.java.proyecto.entities.TablaMostrarFacturas"%>
+<%@page import="ar.org.centro8.curso.java.proyecto.repositorios.jdbc.TablaMostrarFacturasRepository"%>
+<%@page import="ar.org.centro8.curso.java.proyecto.repositorios.interfaces.I_TablaMostrarFacturasRepository"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.repositorios.jdbc.ProductoRepository"%>
 <%@page import="ar.org.centro8.curso.java.proyecto.entities.Producto"%>
 <%@page import="java.util.ArrayList"%>
@@ -37,11 +40,32 @@
         System.out.println("El bucle for "+e);
     }
     */
+    try{
+        Connection conn= Connector.getConnection();
+        I_TablaMostrarFacturasRepository itmfr = new TablaMostrarFacturasRepository(conn);
+        int idFactura = 0;
+        System.out.println("\nTodos\n");
+
     
-    out.println(
-        new HtmlTable<Producto>()
-            .getTable(
-                new ProductoRepository(Connector.getConnection()).getAll()
-            )
-        ); 
+        if((request.getParameter("buscarTitulo") != null) && (request.getParameter("buscarTitulo") != "")) {
+            idFactura = Integer.parseInt(request.getParameter("buscarTitulo"));
+        }
+        System.out.println("FACTURA: " + idFactura);
+        out.println(
+            new HtmlTable<TablaMostrarFacturas>()
+                .getTable(
+                    new TablaMostrarFacturasRepository(Connector.getConnection()).getAll(idFactura)
+                )
+            );
+    }catch(NumberFormatException nfe){
+        System.out.println("Error NumberFormatException value: " + request.getParameter("buscarTitulo"));
+    }
+    
+  /*  if((request.getParameter("buscarTitulo") != null) && (request.getParameter("buscarTitulo") != "")) {
+        idFactura = Integer.parseInt(request.getParameter("buscarTitulo"));
+    }else{
+        idFactura = 0;
+    };*/
+    //itmfr.getAll().forEach(System.out::println);
+    
 %>
